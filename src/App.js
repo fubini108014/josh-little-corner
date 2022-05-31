@@ -13,19 +13,33 @@ import { NavigateButtonGroup, Logo } from "./components/layout/Header";
 import Home from "./components/pages/Home";
 import Portfolio from "./components/pages/Portfolio/Portfolio";
 import CssBaseline from "@mui/material/CssBaseline";
+import ThreeCanvas from "./components/three/ThreeCanvas";
+
+const CanvasWrapper = styled("div")({
+  position: "fixed",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+});
 
 const PageLayout = styled("div")({
   position: "relative",
 });
 
 const Main = styled("div")({
-  overflow: "auto",
+  overflow: "overlay",
+  //overflow: "auto",
   height: "100vh",
+  //scrollbarGutter: "stable both-edges",
 });
 
 function Layout() {
   return (
     <PageLayout>
+      <CanvasWrapper>
+        <ThreeCanvas />
+      </CanvasWrapper>
       <Logo />
       <NavigateButtonGroup />
       <Main>

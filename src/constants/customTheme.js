@@ -11,4 +11,7 @@ export const customTheme = createTheme({
       //次要色
     },
   },
+  palette: {
+    mode: "dark",
+  },
 });

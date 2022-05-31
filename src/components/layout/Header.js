@@ -3,19 +3,21 @@ import { styled } from "@mui/material/styles";
 import RedditIcon from "@mui/icons-material/Reddit";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
-import DeleteIcon from "@mui/icons-material/Delete";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import HomeIcon from "@mui/icons-material/Home";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import { useNavigate } from "react-router-dom";
+import AssignmentIndSharpIcon from "@mui/icons-material/AssignmentIndSharp";
+import ConstructionIcon from "@mui/icons-material/Construction";
+import CottageIcon from "@mui/icons-material/Cottage";
+import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 
 const LOGO = styled("div")({
   margin: "5px 10px",
   display: "flex",
   position: "absolute",
-  top: 5,
+  top: 10,
   left: 10,
   alignItems: "center",
+  color: "#fff",
   "& svg": {
     marginRight: 5,
   },
@@ -28,11 +30,14 @@ const NavigateButton = styled("div")({
   margin: "5px 10px",
   display: "flex",
   alignItems: "center",
+  zIndex: 10,
   "& button": {
-    color: "#fff",
+    color: "#e4e6eb",
     marginBottom: "4px !important",
+    backgroundColor: "rgb(255 255 255 / 10%)",
+    boxShadow: "inset -1px 2px 3px -2px #fff",
     "&:hover": {
-      backgroundColor: "rgb(255 255 255 / 12%)",
+      backgroundColor: "rgb(255 255 255 / 10%)",
     },
   },
 });
@@ -58,9 +63,9 @@ export const NavigateButtonGroup = () => {
   let navigate = useNavigate();
   return (
     <NavigateButton>
-      <Stack direction="row" spacing={3}>
+      <Stack direction="row" spacing={{ xs: 1, sm: 3 }}>
         <IconButton aria-label="about me" onClick={() => navigate("/about")}>
-          <DeleteIcon />
+          <AssignmentIndSharpIcon />
           <IconDesc>關於我</IconDesc>
         </IconButton>
         <IconButton
@@ -71,18 +76,18 @@ export const NavigateButtonGroup = () => {
           <IconDesc>學經歷</IconDesc>
         </IconButton>
         <IconButton aria-label="skill" onClick={() => navigate("/skill")}>
-          <AddShoppingCartIcon />
+          <ConstructionIcon />
           <IconDesc>技能</IconDesc>
         </IconButton>
         <IconButton
           aria-label="portfolio"
           onClick={() => navigate("/portfolio")}
         >
-          <AddShoppingCartIcon />
+          <LibraryBooksIcon />
           <IconDesc>作品集</IconDesc>
         </IconButton>
         <IconButton aria-label="home" onClick={() => navigate("/home")}>
-          <HomeIcon />
+          <CottageIcon />
           <IconDesc>首頁</IconDesc>
         </IconButton>
       </Stack>

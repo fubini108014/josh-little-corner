@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/josh-little-corner/static/css/main.5d24c80a.css",
-    "main.js": "/josh-little-corner/static/js/main.b512f58c.js",
+    "main.css": "/josh-little-corner/static/css/main.54e17d5c.css",
+    "main.js": "/josh-little-corner/static/js/main.a251ff97.js",
     "static/js/787.6c2ca414.chunk.js": "/josh-little-corner/static/js/787.6c2ca414.chunk.js",
     "static/media/flower.gltf": "/josh-little-corner/static/media/flower.d6d1c6fba8586db04085.gltf",
     "static/media/uv_grid_opengl.jpg": "/josh-little-corner/static/media/uv_grid_opengl.5286b2c75b5631e4c0ba.jpg",
     "static/media/animal01.jpg": "/josh-little-corner/static/media/animal01.a15f966129926b026e92.jpg",
     "static/media/animal02.jpg": "/josh-little-corner/static/media/animal02.96cc2569ad346cbb2157.jpg",
     "index.html": "/josh-little-corner/index.html",
-    "main.5d24c80a.css.map": "/josh-little-corner/static/css/main.5d24c80a.css.map",
-    "main.b512f58c.js.map": "/josh-little-corner/static/js/main.b512f58c.js.map",
+    "main.54e17d5c.css.map": "/josh-little-corner/static/css/main.54e17d5c.css.map",
+    "main.a251ff97.js.map": "/josh-little-corner/static/js/main.a251ff97.js.map",
     "787.6c2ca414.chunk.js.map": "/josh-little-corner/static/js/787.6c2ca414.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d24c80a.css",
-    "static/js/main.b512f58c.js"
+    "static/css/main.54e17d5c.css",
+    "static/js/main.a251ff97.js"
   ]
 }

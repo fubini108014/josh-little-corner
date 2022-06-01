@@ -3,10 +3,9 @@ import Box from "@mui/material/Box";
 import SpeedDial from "@mui/material/SpeedDial";
 import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
-import FileCopyIcon from "@mui/icons-material/FileCopyOutlined";
-import SaveIcon from "@mui/icons-material/Save";
-import PrintIcon from "@mui/icons-material/Print";
-import ShareIcon from "@mui/icons-material/Share";
+import LineIcon from "../../assets/icon/LineIcon";
+import EmailIcon from "@mui/icons-material/Email";
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import { styled } from "@mui/material/styles";
 
 const SpeedDialContainer = styled("div")({
@@ -16,10 +15,9 @@ const SpeedDialContainer = styled("div")({
 });
 
 const actions = [
-  { icon: <FileCopyIcon />, name: "與我聯繫" },
-  { icon: <SaveIcon />, name: "Save" },
-  { icon: <PrintIcon />, name: "Print" },
-  { icon: <ShareIcon />, name: "簡歷下載" },
+  { icon: <EmailIcon />, name: "Email" },
+  { icon: <LineIcon />, name: "Line" },
+  { icon: <PictureAsPdfIcon />, name: "簡歷表" },
 ];
 
 export function SpeedDialTooltipOpen() {

@@ -12,6 +12,8 @@ import { SpeedDialTooltipOpen } from "./components/layout/Footer";
 import { NavigateButtonGroup, Logo } from "./components/layout/Header";
 import Home from "./components/pages/Home";
 import Portfolio from "./components/pages/Portfolio/Portfolio";
+import About from "./components/pages/About/About";
+import Experience from "./components/pages/Experience/Experience";
 import CssBaseline from "@mui/material/CssBaseline";
 import ThreeCanvas from "./components/three/ThreeCanvas";
 
@@ -58,9 +60,9 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="home" element={<Home />} />
-            <Route path="about" element={<h1>about</h1>} />
+            <Route path="about" element={<About />} />
             <Route path="skill" element={<h1>skill</h1>} />
-            <Route path="experience" element={<h1>experience</h1>} />
+            <Route path="experience" element={<Experience />} />
             <Route path="portfolio" element={<Portfolio />} />
           </Route>
           <Route path="/404" element={<div>Page NotFound</div>} />

@@ -16,6 +16,7 @@ import About from "./components/pages/About/About";
 import Experience from "./components/pages/Experience/Experience";
 import CssBaseline from "@mui/material/CssBaseline";
 import ThreeCanvas from "./components/three/ThreeCanvas";
+import Contact from "./components/contact/Contact";
 
 const CanvasWrapper = styled("div")({
   position: "fixed",
@@ -48,6 +49,7 @@ function Layout() {
         <Outlet />
       </Main>
       <SpeedDialTooltipOpen />
+      <Contact />
     </PageLayout>
   );
 }

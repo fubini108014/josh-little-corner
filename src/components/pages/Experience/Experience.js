@@ -3,8 +3,9 @@ import Timeline from "./Timeline";
 import { TimeLineItems } from "../../../data/timelineSource";
 import ExperienceDesc from "./ExperienceDesc";
 
+const defaultSelectIndex = 3;
 function Experience() {
-  const [selectIndex, setSelectIndex] = useState(3);
+  const [selectIndex, setSelectIndex] = useState(defaultSelectIndex);
 
   const currentData = TimeLineItems.find((el) => el.order === selectIndex);
   console.log("currentData:", currentData);
@@ -17,7 +18,7 @@ function Experience() {
   return (
     <div>
       <ExperienceDesc dataSource={currentData} />
-      <Timeline onClick={handleClickStep} />
+      <Timeline step={selectIndex} onClick={handleClickStep} />
     </div>
   );
 }

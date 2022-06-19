@@ -9,6 +9,8 @@ import AssignmentIndSharpIcon from "@mui/icons-material/AssignmentIndSharp";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import CottageIcon from "@mui/icons-material/Cottage";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
+import MoreIcon from "@mui/icons-material/MoreVert";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const LOGO = styled("div")({
   margin: "5px 10px",
@@ -38,6 +40,7 @@ const NavigateButton = styled("div")({
     boxShadow: "inset -1px 2px 3px -2px #fff",
     "&:hover": {
       backgroundColor: "rgb(255 255 255 / 10%)",
+      //boxShadow: "2px -3px 14px 0px #ffd700",
     },
   },
 });
@@ -61,6 +64,8 @@ export const Logo = () => {
 
 export const NavigateButtonGroup = () => {
   let navigate = useNavigate();
+  const isMobile = useMediaQuery("(max-width:685px)");
+
   return (
     <NavigateButton>
       <Stack direction="row" spacing={{ xs: 1, sm: 3 }}>
@@ -90,6 +95,12 @@ export const NavigateButtonGroup = () => {
           <CottageIcon />
           <IconDesc>首頁</IconDesc>
         </IconButton>
+        {isMobile && (
+          <IconButton aria-label="more" onClick={() => {}}>
+            <MoreIcon />
+            <IconDesc>更多</IconDesc>
+          </IconButton>
+        )}
       </Stack>
     </NavigateButton>
   );

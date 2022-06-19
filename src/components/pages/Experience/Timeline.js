@@ -72,8 +72,16 @@ const TimelineContainer = styled("div")({
   "& .MuiStep-root:nth-last-of-type(1) button.stepBtn": {
     cursor: "default",
   },
+  "& .MuiStep-root button.stepSelected span.MuiStepLabel-iconContainer > div": {
+    boxShadow: "inset 0px 0px 6px 1px #e2e2e2e6",
+  },
   "& .MuiStepLabel-label": {
     marginTop: "6px !important",
+  },
+  "@media screen and (max-width: 750px)": {
+    left: 0,
+    bottom: 15,
+    width: "100%",
   },
 });
 
@@ -165,7 +173,7 @@ ColorlibStepIcon.propTypes = {
 
 const steps = ["NSYSU", "NCCU", "鉅祥企業", "嘉實資訊", "至今"];
 
-export default function Timeline({ onClick = () => {} }) {
+export default function Timeline({ step, onClick = () => {} }) {
   return (
     <TimelineContainer>
       <Stepper
@@ -177,7 +185,7 @@ export default function Timeline({ onClick = () => {} }) {
           <Step key={label}>
             <StepButton
               onClick={() => onClick(index)}
-              className="stepBtn"
+              className={`stepBtn ${step === index ? "stepSelected" : ""}`}
               sx={{ p: "12px 8px", m: "-12px -8px" }}
             >
               <StepLabel StepIconComponent={ColorlibStepIcon}>
